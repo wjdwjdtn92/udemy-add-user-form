@@ -1,10 +1,11 @@
 import React from "react";
-import AddUserForm from "./components/AddUser/AddUserForm";
+import "./App.css";
+import Users from "./components/Users/Users";
 
 function App() {
   return (
-    <div>
-      <AddUserForm />
+    <div className="container">
+      <Users />
     </div>
   );
 }

@@ -1,0 +1,12 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+}
+
+.user-list li {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-weight: bold;
+}

@@ -1,0 +1,42 @@
+.form {
+  background-color: white;
+  padding: 18px;
+
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  gap: 6px;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form input {
+  width: 100%;
+  border: 1px solid #ccc;
+  font: inherit;
+  line-height: 1.5rem;
+  padding: 0 0.25rem;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: #8b005d;
+}
+
+.form.invalid input {
+  border-color: red;
+  background: rgb(141, 117, 117);
+}
+
+.form button {
+  width: 120px;
+  height: 30px;
+  font-size: 16px;
+  background-color: rgb(99, 9, 119);
+  color: white;
+  outline: none;
+  border: none;
+}
