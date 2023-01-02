@@ -21,16 +21,15 @@ function Users() {
   const [users, setUsers] = useState(DUMY_DATA);
 
   const handleAddUser = (user) => {
-    const newUsers = [
-      ...users,
-      {
-        ...user,
-        id: uuidv4(),
-      },
-    ];
-
-    console.log(newUsers);
-    setUsers(newUsers);
+    setUsers((preState) => {
+      return [
+        ...preState,
+        {
+          ...user,
+          id: uuidv4(),
+        },
+      ];
+    });
   };
 
   return (
