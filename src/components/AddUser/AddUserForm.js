@@ -19,6 +19,10 @@ function AddUserForm({ addUser }) {
   const submitHandler = (event) => {
     event.preventDefault();
 
+    if (username.trim().length === 0) {
+      return;
+    }
+
     const userData = {
       username,
       year,
@@ -42,6 +46,7 @@ function AddUserForm({ addUser }) {
           value={username}
           onChange={handleChageUsername}
           required
+          minLength="2"
         />
         <label htmlFor="name">Age(Years)</label>
         <input
@@ -51,6 +56,7 @@ function AddUserForm({ addUser }) {
           min="1900"
           max={new Date().getFullYear()}
           onChange={handleChageAge}
+          required
         />
         <button aria-label="Add User Button" type="submit">
           Add User
