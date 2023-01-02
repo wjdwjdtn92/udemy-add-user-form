@@ -35,15 +35,17 @@ function AddUserForm({ addUser }) {
   return (
     <Card>
       <form className={styles.form} onSubmit={submitHandler}>
-        <label>Username</label>
+        <label htmlFor="username">Username</label>
         <input
+          id="username"
           type="text"
           value={username}
           onChange={handleChageUsername}
           required
         />
-        <label>Age(Years)</label>
+        <label htmlFor="name">Age(Years)</label>
         <input
+          id="age"
           type="number"
           value={year}
           min="1900"
