@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../UI/Button";
 import Card from "../UI/Card";
 import styles from "./AddUserForm.module.css";
 
@@ -58,9 +59,9 @@ function AddUserForm({ addUser }) {
           onChange={handleChageAge}
           required
         />
-        <button aria-label="Add User Button" type="submit">
+        <Button ariaLabel="Add User Button" type="submit">
           Add User
-        </button>
+        </Button>
       </form>
     </Card>
   );
