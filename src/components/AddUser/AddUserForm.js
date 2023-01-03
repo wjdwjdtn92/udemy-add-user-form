@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import ErrorModal from "../UI/ErrorModal";
@@ -48,7 +48,7 @@ function AddUserForm({ addUser }) {
   };
 
   return (
-    <Card>
+    <Fragment>
       {error && (
         <ErrorModal
           title={error.title}
@@ -56,31 +56,33 @@ function AddUserForm({ addUser }) {
           onConfirm={errorHandler}
         />
       )}
-      <form className={styles.form} onSubmit={submitHandler}>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          type="text"
-          value={username}
-          onChange={handleChageUsername}
-          required
-          minLength="2"
-        />
-        <label htmlFor="name">Age(Years)</label>
-        <input
-          id="age"
-          type="number"
-          value={year}
-          min="1900"
-          max={new Date().getFullYear()}
-          onChange={handleChageAge}
-          required
-        />
-        <Button ariaLabel="Add User Button" type="submit">
-          Add User
-        </Button>
-      </form>
-    </Card>
+      <Card>
+        <form className={styles.form} onSubmit={submitHandler}>
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            type="text"
+            value={username}
+            onChange={handleChageUsername}
+            // required
+            // minLength="2"
+          />
+          <label htmlFor="name">Age(Years)</label>
+          <input
+            id="age"
+            type="number"
+            value={year}
+            min="1900"
+            max={new Date().getFullYear()}
+            onChange={handleChageAge}
+            // required
+          />
+          <Button ariaLabel="Add User Button" type="submit">
+            Add User
+          </Button>
+        </form>
+      </Card>
+    </Fragment>
   );
 }
 
